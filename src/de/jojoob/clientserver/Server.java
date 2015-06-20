@@ -18,7 +18,7 @@ public class Server {
 	private Runnable continuousReader;
 
 	public Server(int port) throws IOException {
-		this.serverSocket = new ServerSocket(31337);
+		this.serverSocket = new ServerSocket(port);
 		this.socket = serverSocket.accept();
 		this.output = new DataOutputStream(this.socket.getOutputStream());
 //		DataInputStream dataInputStream = new DataInputStream(this.socket.getInputStream());

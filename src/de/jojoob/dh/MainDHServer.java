@@ -41,9 +41,11 @@ public class MainDHServer {
 		System.out.println("duration: " + durationPG + " milliseconds");
 
 		dhServer.generateA();
-
+		System.out.println("write P");
 		server.writeLine(dhServer.getP().toString());
+		System.out.println("write G");
 		server.writeLine(dhServer.getG().toString());
+		System.out.println("write A");
 		server.writeLine(dhServer.getA().toString());
 
 	}
